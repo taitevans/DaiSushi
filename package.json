@@ -1,0 +1,26 @@
+{
+  "name": "daisushi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taitevans/DaiSushi.git"
+  },
+  "author": "Tait Evans",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/taitevans/DaiSushi/issues"
+  },
+  "homepage": "https://github.com/taitevans/DaiSushi",
+  "dependencies": {
+    "next": "^10.0.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
