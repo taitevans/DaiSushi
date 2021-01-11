@@ -1,8 +1,14 @@
+import Link from "next/link";
+
 const Navigation = () => (
   <>
     <nav>
-      <a href="/">Home</a>
-      <a href="/page-2/">Page 2</a>
+      <Link href="/">
+        <a>Home</a>
+      </Link>
+      <Link href="/page-2/">
+        <a>Page 2</a>
+      </Link>
     </nav>
 
     <style jsx>{`
