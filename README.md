@@ -6,10 +6,12 @@ Responsive website for DaiSushi
 
 ```bash
 git clone https://github.com/taitevans/DaiSushi
-cd DaiSushi
+cd DaiSushi/
 npm i
 ```
 
 ## How to run
 
-`npm run dev`
+```bash
+npm run dev
+```
