@@ -12,6 +12,9 @@ const App = ({ Component, pageProps }) => (
       <meta name="description" content="Sushi made with Love!" />
       <title>DaiSushi</title>
     </Head>
+    <main>
+      <Component {...pageProps} />
+    </main>
 
     <style global jsx>{`
       @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
@@ -44,6 +47,10 @@ const App = ({ Component, pageProps }) => (
 
       body {
         font-family: sans-serif;
+      }
+
+      main {
+        padding: 56px 16px 0 16px;
       }
 
       a {
