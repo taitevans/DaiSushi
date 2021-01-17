@@ -53,6 +53,13 @@ const App = ({ Component, pageProps }) => (
         padding: 56px 16px 0 16px;
       }
 
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 12px;
+        max-width: 100%;
+      }
+
       a {
         text-decoration: none;
       }
