@@ -12,4 +12,4 @@ npm i
 
 ## How to run
 
-``npm run dev`
+`npm run dev`
