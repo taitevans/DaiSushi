@@ -13,11 +13,10 @@ const Navigation = () => (
 
     <style jsx>{`
       nav {
-        height: 60px;
-        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        display: none;
       }
 
       a {

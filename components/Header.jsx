@@ -1,7 +1,11 @@
+import { useState } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
+import MenuIcon from "./MenuIcon";
+
 const Header = () => {
+  const [isToggled, toggle] = useState(false);
   return (
     <>
       <header>
@@ -10,6 +14,9 @@ const Header = () => {
             <Logo size="2" />
           </a>
         </Link>
+        <button aria-label="navigation" onClick={() => toggle(!isToggled)}>
+          <MenuIcon toggled={isToggled} />
+        </button>
         <Navigation />
       </header>
 
