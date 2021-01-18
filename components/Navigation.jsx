@@ -46,6 +46,7 @@ const Navigation = (props) => (
           height: auto;
           width: auto;
           position: static;
+          pointer-events: auto;
         }
       }
     `}</style>
