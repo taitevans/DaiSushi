@@ -1,4 +1,6 @@
 import Link from "next/link";
+import InstagramIcon from "./InstagramIcon";
+import FacebookIcon from "./FacebookIcon";
 
 let colours = ["pink", "green", "orange", "red"];
 let i = 0;
@@ -37,6 +39,16 @@ export default function Navigation(props) {
         <Link href="/contact/">
           <a>Contact</a>
         </Link>
+
+        <div className="social-divider"></div>
+        <div className="social-links">
+          <a href="https://instagram.com/">
+            <InstagramIcon />
+          </a>
+          <a href="https://facebook.com/">
+            <FacebookIcon />
+          </a>
+        </div>
       </nav>
 
       <style jsx>{`
@@ -67,12 +79,12 @@ export default function Navigation(props) {
           pointer-events: auto;
         }
 
-        .green ~ .drawer{
+        .green ~ .drawer {
           background-color: var(--green);
           color: var(--pink);
         }
 
-        .orange ~ .drawer{
+        .orange ~ .drawer {
           background-color: var(--orange);
           color: var(--red);
         }
@@ -82,14 +94,24 @@ export default function Navigation(props) {
           color: var(--orange);
         }
 
-        .pink ~ .drawer{
+        .pink ~ .drawer {
           background-color: var(--pink);
           color: var(--green);
+        }
+
+        .social-divider {
+          display: none;
+        }
+
+        .social-links {
+          display: flex;
+          margin-right: 0;
         }
 
         a {
           padding: 12px;
           color: inherit;
+          display: flex;
         }
 
         @media only screen and (min-width: 840px) {
@@ -98,6 +120,7 @@ export default function Navigation(props) {
             z-index: 0;
             opacity: 1;
             flex-direction: row;
+            align-items: center;
             height: auto;
             width: auto;
             position: static;
@@ -105,8 +128,20 @@ export default function Navigation(props) {
             transition: none;
           }
 
-          .drawer
+          .drawer {
             display: none;
+          }
+
+          .social-divider {
+            display: block;
+            width: 1px;
+            height: 18px;
+            background-color: rgba(0, 0, 0, 0.2);
+            margin: 0 12px;
+          }
+
+          .social-links {
+            margin-right: -12px;
           }
         }
       `}</style>
