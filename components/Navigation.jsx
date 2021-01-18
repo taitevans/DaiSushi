@@ -4,7 +4,7 @@ let colours = ["pink", "green", "orange", "red"];
 let i = 0;
 
 export default function Navigation(props) {
-  if (props.toggled) {
+  if (props.toggled === false) {
     if (i >= 3) {
       i = 0;
     } else {
@@ -42,7 +42,8 @@ export default function Navigation(props) {
           position: absolute;
           top: 0;
           left: 0;
-          background-color: var(--bg);
+          background-color: var(--pink);
+          color: var(--green);
           pointer-events: none;
           opacity: 0;
           z-index: -3;
