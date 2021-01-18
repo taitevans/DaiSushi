@@ -1,11 +1,19 @@
 import { useState } from "react";
 import Link from "next/link";
+import useRouter, { Router } from "next/router";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 import MenuIcon from "./MenuIcon";
+import { useEffect } from "react/cjs/react.development";
 
 const Header = () => {
   const [isToggled, toggle] = useState(false);
+
+  // Close navigation menu when page changes
+  Router.events.on("routeChangeStart", () => {
+    if (isToggled) toggle(!isToggled);
+  });
+
   return (
     <>
       <header>
@@ -14,10 +22,14 @@ const Header = () => {
             <Logo size="2" />
           </a>
         </Link>
-        <button aria-label="navigation" onClick={() => toggle(!isToggled)}>
+        <button
+          className="menu-icon"
+          aria-label="navigation"
+          onClick={() => toggle(!isToggled)}
+        >
           <MenuIcon toggled={isToggled} />
         </button>
-        <Navigation />
+        <Navigation toggled={isToggled} />
       </header>
 
       <style jsx>{`
@@ -34,6 +46,12 @@ const Header = () => {
         .logo {
           margin-right: auto;
           display: flex;
+        }
+
+        @media only screen and (min-width: 840px) {
+          .menu-icon {
+            display: none;
+          }
         }
       `}</style>
     </>
