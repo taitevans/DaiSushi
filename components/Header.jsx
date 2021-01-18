@@ -6,7 +6,7 @@ import Navigation from "./Navigation";
 import MenuIcon from "./MenuIcon";
 import { useEffect } from "react/cjs/react.development";
 
-const Header = () => {
+export default function Header() {
   const [isToggled, toggle] = useState(false);
 
   // Close navigation menu when page changes
@@ -56,6 +56,4 @@ const Header = () => {
       `}</style>
     </>
   );
-};
-
-export default Header;
+}
