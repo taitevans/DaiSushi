@@ -2,7 +2,11 @@ import Link from "next/link";
 
 const Navigation = (props) => (
   <>
-    <nav className={props.toggled ? "toggled" : ""}>
+    <nav
+      className={`${props.toggled ? "toggled" : ""} ${
+        props.drawer ? "drawer" : ""
+      }`}
+    >
       <Link href="/">
         <a>Home</a>
       </Link>
@@ -13,6 +17,10 @@ const Navigation = (props) => (
 
     <style jsx>{`
       nav {
+        display: none;
+      }
+
+      .drawer {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -40,6 +48,7 @@ const Navigation = (props) => (
 
       @media only screen and (min-width: 840px) {
         nav {
+          display: flex;
           z-index: 0;
           opacity: 1;
           flex-direction: row;
@@ -47,6 +56,11 @@ const Navigation = (props) => (
           width: auto;
           position: static;
           pointer-events: auto;
+          transition: none;
+        }
+
+        .drawer {
+          display: none;
         }
       }
     `}</style>

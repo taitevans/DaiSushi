@@ -29,7 +29,8 @@ export default function Header() {
         >
           <MenuIcon toggled={isToggled} />
         </button>
-        <Navigation toggled={isToggled} />
+        <Navigation />
+        <Navigation toggled={isToggled} drawer={true} />
       </header>
 
       <style jsx>{`
