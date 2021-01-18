@@ -19,11 +19,23 @@ export default function Navigation(props) {
           props.drawer ? "drawer" : ""
         } ${colours[i]}`}
       >
-        <Link href="/">
-          <a>Home</a>
+        <Link href="/order/">
+          <a>Order</a>
         </Link>
-        <Link href="/page-2/">
-          <a>Page 2</a>
+        <Link href="/menu/">
+          <a>Menu</a>
+        </Link>
+        <Link href="/stores/">
+          <a>Stores</a>
+        </Link>
+        <Link href="/about/">
+          <a>About us</a>
+        </Link>
+        <Link href="/careers/">
+          <a>Careers</a>
+        </Link>
+        <Link href="/contact/">
+          <a>Contact</a>
         </Link>
       </nav>
 
