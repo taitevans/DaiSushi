@@ -16,7 +16,7 @@ const App = ({ Component, pageProps }) => (
     </main>
 
     <style global jsx>{`
-      @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&display=swap");
       @import url("https://rsms.me/inter/inter.css");
 
       :root {
@@ -42,6 +42,15 @@ const App = ({ Component, pageProps }) => (
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      :root,
+      body {
+        overflow-x: hidden;
       }
 
       body {
