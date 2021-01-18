@@ -54,22 +54,22 @@ export default function Navigation(props) {
           pointer-events: auto;
         }
 
-        .green {
+        .green ~ .drawer{
           background-color: var(--green);
           color: var(--pink);
         }
 
-        .orange {
+        .orange ~ .drawer{
           background-color: var(--orange);
           color: var(--red);
         }
 
-        .red {
+        .red ~ .drawer {
           background-color: var(--red);
           color: var(--orange);
         }
 
-        .pink {
+        .pink ~ .drawer{
           background-color: var(--pink);
           color: var(--green);
         }
@@ -92,7 +92,7 @@ export default function Navigation(props) {
             transition: none;
           }
 
-          .drawer {
+          .drawer
             display: none;
           }
         }
