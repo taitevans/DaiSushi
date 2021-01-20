@@ -53,8 +53,7 @@ const App = ({ Component, pageProps }) => (
         overflow-x: hidden;
       }
 
-      body {
-        font-family: sans-serif;
+        font-family: "Inter", sans-serif;
       }
 
       main {
