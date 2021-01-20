@@ -4,7 +4,6 @@ import useRouter, { Router } from "next/router";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 import MenuIcon from "./MenuIcon";
-import { useEffect } from "react/cjs/react.development";
 
 export default function Header() {
   const [isToggled, toggle] = useState(false);
