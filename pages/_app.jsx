@@ -50,6 +50,7 @@ const App = ({ Component, pageProps }) => (
 
       body {
         font-family: "Inter", sans-serif;
+        overflow-x: hidden;
       }
 
       main {
