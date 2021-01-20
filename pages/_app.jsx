@@ -48,11 +48,7 @@ const App = ({ Component, pageProps }) => (
         scroll-behavior: smooth;
       }
 
-      :root,
       body {
-        overflow-x: hidden;
-      }
-
         font-family: "Inter", sans-serif;
       }
 
