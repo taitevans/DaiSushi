@@ -11,10 +11,6 @@ const Index = () => (
             with <span className="em pink">Love</span>
           </h1>
           <div className="buttons">
-            <a href="https://1234seno.kim" className="button">
-              order now
-            </a>
-            <Link href="/">
             <Link href="/order/">
               <a className="button secondary">order now</a>
             </Link>
