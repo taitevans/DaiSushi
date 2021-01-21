@@ -27,6 +27,7 @@ const MenuIcon = (props) => (
         <path
           fill="#EF8FFF"
           d="M4.5 8l-.7-.6C1.5 5.4 0 4 0 2.4 0 1.1 1 0 2.5 0c.8 0 1.5.4 2 1 .5-.6 1.2-1 2-1C8 0 9 1 9 2.4c0 1.6-1.5 3-3.8 5l-.7.6z"
+          className={`${props.colour}-drawer`}
         />
       </svg>
     </div>

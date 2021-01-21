@@ -5,6 +5,9 @@ import Logo from "./Logo";
 import Navigation from "./Navigation";
 import MenuIcon from "./MenuIcon";
 
+let colours = ["pink", "green", "orange", "red"];
+let i = 0;
+
 export default function Header() {
   const [isToggled, toggle] = useState(false);
 
@@ -13,12 +16,21 @@ export default function Header() {
     if (isToggled) toggle(!isToggled);
   });
 
+  if (isToggled) {
+    if (i >= 3) {
+      i = 0;
+    } else {
+      i++;
+    }
+  }
+  let toggleColour = colours[i];
+
   return (
     <>
       <header>
         <Link href="/">
           <a className="logo">
-            <Logo size="2" />
+            <Logo size="2" colour={toggleColour} navToggled={isToggled} />
           </a>
         </Link>
         <button
@@ -26,11 +38,37 @@ export default function Header() {
           aria-label="navigation"
           onClick={() => toggle(!isToggled)}
         >
-          <MenuIcon toggled={isToggled} />
+          <MenuIcon toggled={isToggled} colour={toggleColour} />
         </button>
         <Navigation />
-        <Navigation toggled={isToggled} drawer={true} />
+        <Navigation toggled={isToggled} drawer={true} colour={toggleColour} />
       </header>
+
+      <style global jsx>{`
+        .green-drawer {
+          background-color: var(--green);
+          color: var(--pink);
+          fill: var(--pink);
+        }
+
+        .orange-drawer {
+          background-color: var(--orange);
+          color: var(--red);
+          fill: var(--red);
+        }
+
+        .red-drawer {
+          background-color: var(--red);
+          color: var(--orange);
+          fill: var(--orange);
+        }
+
+        .pink-drawer {
+          background-color: var(--pink);
+          color: var(--green);
+          fill: var(--green);
+        }
+      `}</style>
 
       <style jsx>{`
         header {
