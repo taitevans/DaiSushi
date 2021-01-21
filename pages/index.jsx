@@ -15,6 +15,10 @@ const Index = () => (
               order now
             </a>
             <Link href="/">
+            <Link href="/order/">
+              <a className="button secondary">order now</a>
+            </Link>
+            <Link href="/stores/">
               <a className="button secondary">find a store</a>
             </Link>
           </div>
