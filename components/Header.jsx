@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Router } from "next/router";
 import Logo from "./Logo";
@@ -10,6 +10,14 @@ let i = 0;
 
 export default function Header() {
   const [isToggled, toggle] = useState(false);
+
+  useEffect(() => {
+    if (isToggled) {
+      document.getElementById("body").style.overflowY = "hidden";
+    } else {
+      document.getElementById("body").style.overflowY = "scroll";
+    }
+  }, [isToggled]);
 
   // Close navigation menu when page changes
   Router.events.on("routeChangeStart", () => {
