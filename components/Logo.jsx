@@ -14,7 +14,9 @@ const Logo = (props) => (
       <path
         fill="#EF8FFF"
         d="M41.9 10.34l-.36-.33c-1.29-1.17-2.14-1.94-2.14-2.88 0-.78.6-1.38 1.37-1.38.44 0 .86.2 1.13.52a1.5 1.5 0 011.12-.52c.77 0 1.38.6 1.38 1.38 0 .94-.85 1.71-2.14 2.88l-.36.33zM73.3 10.34l-.36-.33c-1.29-1.17-2.14-1.94-2.14-2.88 0-.78.6-1.38 1.38-1.38.43 0 .85.2 1.12.52a1.5 1.5 0 011.13-.52c.76 0 1.37.6 1.37 1.38 0 .94-.85 1.71-2.14 2.88l-.36.33z"
-        className={props.navToggled ? `${props.colour}-drawer` : ""}
+        className={
+          props.navToggled ? `${props.colour}-drawer hearts` : "hearts"
+        }
       />
       <path
         fill="#071502"
@@ -38,6 +40,12 @@ const Logo = (props) => (
 
       .dark > path:nth-child(3) {
         fill: #ef8fff;
+      }
+
+      @media only screen and (min-width: 840px) {
+        .hearts {
+          fill: var(--pink);
+        }
       }
     `}</style>
   </>
