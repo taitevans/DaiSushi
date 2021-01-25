@@ -110,7 +110,7 @@ const App = ({ Component, pageProps }) => (
       }
       @media only screen and (min-width: 840px) {
         .no-body-scroll {
-          overflow-y: scroll;
+          overflow-y: auto;
         }
       }
     `}</style>
