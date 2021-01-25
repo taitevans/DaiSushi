@@ -217,8 +217,8 @@ export default function Index() {
 
         @supports (-webkit-text-stroke: #fff) {
           .about-titles,
-          h1::selection,
-          h1::-webkit-selection {
+          .about-titles > h1::selection,
+          .about-titles > h1::-webkit-selection {
             -webkit-text-stroke: 2px var(--green);
             color: transparent;
           }
