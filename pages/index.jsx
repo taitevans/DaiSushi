@@ -162,7 +162,7 @@ export default function Index() {
           left: 0;
           height: 100vh;
           width: 100%;
-          z-index: -1;
+          z-index: -5;
           background-color: var(--bg);
         }
 
