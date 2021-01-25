@@ -4,7 +4,14 @@ import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 
 export default function Index() {
-  const [bg, setBg] = useState({ defaultBg: "", pinkBg: "" });
+  const [bg, setBg] = useState({
+    defaultBg: "",
+    pinkBg: "",
+    orangeBg: "",
+    greenBg: "",
+    redBg: "",
+  });
+
   useEffect(() => {
     let start = getComputedStyle(document.documentElement).getPropertyValue(
       "--bg"
@@ -12,7 +19,23 @@ export default function Index() {
     let pink = getComputedStyle(document.documentElement).getPropertyValue(
       "--pink"
     );
-    setBg((prevBg) => ({ ...prevBg, defaultBg: start, pinkBg: pink }));
+    let orange = getComputedStyle(document.documentElement).getPropertyValue(
+      "--orange"
+    );
+    let green = getComputedStyle(document.documentElement).getPropertyValue(
+      "--green"
+    );
+    let red = getComputedStyle(document.documentElement).getPropertyValue(
+      "--red"
+    );
+    setBg((prevBg) => ({
+      ...prevBg,
+      defaultBg: start,
+      pinkBg: pink,
+      orangeBg: orange,
+      greenBg: green,
+      redBg: red,
+    }));
   }, []);
 
   return (
@@ -48,18 +71,30 @@ export default function Index() {
       <section id="specials">
         <Controller>
           <Scene indicators={true} duration="100%">
-            <Timeline>
+            <Timeline target={<div className="specials-bg" />}>
               <Tween
-                position="0"
                 from={{
                   backgroundColor: bg.defaultBg,
                 }}
                 to={{
                   backgroundColor: bg.pinkBg,
                 }}
-              >
-                <div className="specials-bg" />
-              </Tween>
+              />
+              <Tween
+                to={{
+                  backgroundColor: bg.orangeBg,
+                }}
+              />
+              <Tween
+                to={{
+                  backgroundColor: bg.greenBg,
+                }}
+              />
+              <Tween
+                to={{
+                  backgroundColor: bg.redBg,
+                }}
+              />
               <div className="specials-card">
                 <img src="" alt="" />
                 <h1>
