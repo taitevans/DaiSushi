@@ -27,7 +27,7 @@ export default function Index() {
             </h1>
             <div className="buttons">
               <Link href="/order/">
-                <a className="button secondary">order now</a>
+                <a className="button">order now</a>
               </Link>
               <Link href="/stores/">
                 <a className="button secondary">find a store</a>
