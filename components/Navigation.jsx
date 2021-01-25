@@ -72,6 +72,8 @@ const Navigation = (props) => (
         text-transform: uppercase;
         transform: translateX(90px);
         opacity: 0;
+        transition: all 0.001s;
+        transition-delay: 0.2s;
       }
 
       .toggled {
@@ -80,10 +82,10 @@ const Navigation = (props) => (
       }
 
       .toggled > a {
+        opacity: 1;
         transform: translateX(0);
         transition: all cubic-bezier(0.01, 0.31, 0.11, 0.93) 0.6s;
         transition-delay: calc(0.07s * var(--delay));
-        opacity: 1;
       }
 
       .social-divider {
