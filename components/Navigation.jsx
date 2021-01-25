@@ -46,7 +46,7 @@ const Navigation = (props) => (
 
       .drawer {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
         flex-direction: column;
         height: 100vh;
@@ -58,6 +58,18 @@ const Navigation = (props) => (
         opacity: 0;
         z-index: -3;
         transition: opacity 0.2s ease-out;
+        padding: 0 16px;
+      }
+
+      .drawer > a {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 3em;
+        line-height: 84%;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.1em;
+        text-transform: uppercase;
       }
 
       .toggled {
