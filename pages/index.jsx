@@ -45,10 +45,10 @@ export default function Index() {
         </picture>
       </section>
 
-      <Controller>
-        <Scene indicators={true} duration="100%">
-          <Timeline wrapper={<div className="scrollBg" />}>
-            <section id="specials">
+      <section id="specials">
+        <Controller>
+          <Scene indicators={true} duration="100%">
+            <Timeline>
               <Tween
                 position="0"
                 from={{
@@ -70,10 +70,47 @@ export default function Index() {
                   mi
                 </h1>
               </div>
-            </section>
-          </Timeline>
-        </Scene>
-      </Controller>
+            </Timeline>
+          </Scene>
+        </Controller>
+      </section>
+      <section>
+        <h2>
+          But wait...
+          <br />
+          There's more!
+        </h2>
+        <p>
+          Thousands of years of perfection, with a modern twist. Our range of
+          freshly made sushi is guranateed to fit any taste
+        </p>
+        <Link href="/menu/">
+          <a className="button">See Menu</a>
+        </Link>
+      </section>
+      <section id="about">
+        <div className="container">
+          <div className="about-titles">
+            <h1>Sushi is art</h1>
+            <h1>Sushi is art</h1>
+            <h1>Sushi is art</h1>
+            <h1>Sushi is art</h1>
+            <h1>Sushi is art</h1>
+          </div>
+          <p>
+            Ipsa fugiat nihil culpa. Expedita adipisci dignissimos et rerum
+            officia. Et eum temporibus in tenetur distinctio totam eligendi
+            saepe. Sit et enim est error est animi qui. Velit itaque molestiae
+            qui. Architecto omnis accusantium saepe rerum. Maxime at mollitia
+            eveniet cupiditate. Placeat repellendus harum itaque error quo qui.
+            <br />
+            <br />
+            Et ullam reprehenderit quia quae qui et dolorem. Praesentium
+            voluptatum quia dolores recusandae eveniet. Ea nihil vel fugiat
+            itaque quidem et.
+          </p>
+        </div>
+      </section>
 
       <style global jsx>{`
         .buttons > a {
@@ -158,6 +195,50 @@ export default function Index() {
           width: 100%;
           z-index: -5;
           background-color: var(--bg);
+        }
+
+        #about {
+          background-color: var(--pink);
+          padding: 20px 0;
+          margin: 0 -16px;
+        }
+
+        #about .container {
+          align-items: center;
+        }
+
+        .about-titles {
+          color: var(--green);
+          text-transform: uppercase;
+          grid-column-start: 1;
+          grid-column-end: 3;
+          width: 100%;
+        }
+
+        @supports (-webkit-text-stroke: #fff) {
+          .about-titles,
+          h1::selection,
+          h1::-webkit-selection {
+            -webkit-text-stroke: 2px var(--green);
+            color: transparent;
+          }
+
+          .about-titles > h1:nth-child(3),
+          .about-titles > h1:nth-child(3)::selection,
+          .about-titles > h1:nth-child(3)::-webkit-selection {
+            -webkit-text-stroke: none;
+            color: var(--green);
+          }
+        }
+
+        .about-titles > h1 {
+          line-height: 80%;
+        }
+
+        #about p {
+          grid-column-start: 3;
+          grid-column-end: 5;
+          width: 100%;
         }
 
         @media only screen and (min-width: 840px) {
