@@ -1,7 +1,7 @@
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
-import { useEffect, useState } from "react";
 
 export default function Index() {
   const [bg, setBg] = useState({ defaultBg: "", pinkBg: "" });
