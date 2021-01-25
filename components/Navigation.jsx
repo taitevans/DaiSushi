@@ -10,22 +10,22 @@ const Navigation = (props) => (
       } ${props.colour}-drawer`}
     >
       <Link href="/order/">
-        <a>Order</a>
+        <a style={{ "--delay": 0 }}>Order</a>
       </Link>
       <Link href="/menu/">
-        <a>Menu</a>
+        <a style={{ "--delay": 1 }}>Menu</a>
       </Link>
       <Link href="/stores/">
-        <a>Stores</a>
+        <a style={{ "--delay": 2 }}>Stores</a>
       </Link>
       <Link href="/about/">
-        <a>About us</a>
+        <a style={{ "--delay": 3 }}>About us</a>
       </Link>
       <Link href="/careers/">
-        <a>Careers</a>
+        <a style={{ "--delay": 4 }}>Careers</a>
       </Link>
       <Link href="/contact/">
-        <a>Contact</a>
+        <a style={{ "--delay": 5 }}>Contact</a>
       </Link>
 
       <div className="social-divider"></div>
@@ -70,11 +70,20 @@ const Navigation = (props) => (
         letter-spacing: -0.5px;
         margin-bottom: 0.1em;
         text-transform: uppercase;
+        transform: translateX(90px);
+        opacity: 0;
       }
 
       .toggled {
         opacity: 1;
         pointer-events: auto;
+      }
+
+      .toggled > a {
+        transform: translateX(0);
+        transition: all cubic-bezier(0.01, 0.31, 0.11, 0.93) 0.6s;
+        transition-delay: calc(0.07s * var(--delay));
+        opacity: 1;
       }
 
       .social-divider {
