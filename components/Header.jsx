@@ -79,6 +79,7 @@ export default function Header() {
           background-color: #fff;
           padding: 0 16px;
           position: fixed;
+          z-index: 3;
         }
 
         .logo {
