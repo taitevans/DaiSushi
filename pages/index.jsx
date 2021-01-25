@@ -4,10 +4,7 @@ import { Tween, Timeline } from "react-gsap";
 import { useEffect, useState } from "react";
 
 export default function Index() {
-  const [bg, setBg] = useState({
-    defaultBg: "",
-    pinkBg: "",
-  });
+  const [bg, setBg] = useState({ defaultBg: "", pinkBg: "" });
   useEffect(() => {
     let start = getComputedStyle(document.documentElement).getPropertyValue(
       "--bg"
@@ -15,11 +12,8 @@ export default function Index() {
     let pink = getComputedStyle(document.documentElement).getPropertyValue(
       "--pink"
     );
-    setBg({
-      defaultBg: start,
-      pinkBg: pink,
-    });
-  });
+    setBg((prevBg) => ({ ...prevBg, defaultBg: start, pinkBg: pink }));
+  }, []);
 
   return (
     <>
