@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-import useRouter, { Router } from "next/router";
+import { Router } from "next/router";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 import MenuIcon from "./MenuIcon";
