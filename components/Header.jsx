@@ -13,9 +13,9 @@ export default function Header() {
 
   useEffect(() => {
     if (isToggled) {
-      document.getElementById("body").style.overflowY = "hidden";
+      document.getElementById("body").className = "no-body-scroll";
     } else {
-      document.getElementById("body").style.overflowY = "scroll";
+      document.getElementById("body").className = "";
     }
   }, [isToggled]);
 

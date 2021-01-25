@@ -53,6 +53,10 @@ const App = ({ Component, pageProps }) => (
         overflow-x: hidden;
       }
 
+      .no-body-scroll {
+        overflow-y: hidden;
+      }
+
       main {
         padding: 56px 16px 0 16px;
       }
@@ -103,6 +107,11 @@ const App = ({ Component, pageProps }) => (
 
       .button ~ .secondary:hover {
         color: var(--text-2);
+      }
+      @media only screen and (min-width: 840px) {
+        .no-body-scroll {
+          overflow-y: scroll;
+        }
       }
     `}</style>
   </>
