@@ -71,7 +71,7 @@ export default function Index() {
 
       <section id="specials">
         <Controller>
-          <Scene indicators={true} duration="300">
+          <Scene indicators={true} duration="1600">
             <Timeline target={<div className="specials-bg" />}>
               <Tween
                 from={{
@@ -96,7 +96,15 @@ export default function Index() {
                   backgroundColor: bg.redBg,
                 }}
               />
-              <SpecialsCard title="luvyou" />
+              <Tween
+                to={{
+                  backgroundColor: bg.defaultBg,
+                }}
+              />
+              <SpecialsCard title="luvyou" webp="" img="" alt="" />
+              <SpecialsCard title="nigiri" webp="" img="" alt="" />
+              <SpecialsCard title="uramaki" webp="" img="" alt="" />
+              <SpecialsCard title="maki" webp="" img="" alt="" />
             </Timeline>
           </Scene>
         </Controller>
