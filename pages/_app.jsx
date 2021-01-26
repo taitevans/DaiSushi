@@ -66,6 +66,7 @@ const App = ({ Component, pageProps }) => (
         grid-template-columns: repeat(4, 1fr);
         grid-column-gap: 12px;
         max-width: 100%;
+        margin: 0;
       }
 
       a {
@@ -111,6 +112,11 @@ const App = ({ Component, pageProps }) => (
       @media only screen and (min-width: 840px) {
         .no-body-scroll {
           overflow-y: auto;
+        }
+
+        .container {
+          max-width: 960px;
+          margin: 0 auto;
         }
       }
     `}</style>
