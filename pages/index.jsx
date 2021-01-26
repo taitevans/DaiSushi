@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
+import SpecialsCard from "../components/SpecialsCard";
 
 export default function Index() {
   const [bg, setBg] = useState({
@@ -70,7 +71,7 @@ export default function Index() {
 
       <section id="specials">
         <Controller>
-          <Scene indicators={true} duration="100%">
+          <Scene indicators={true} duration="300">
             <Timeline target={<div className="specials-bg" />}>
               <Tween
                 from={{
@@ -95,16 +96,7 @@ export default function Index() {
                   backgroundColor: bg.redBg,
                 }}
               />
-              <div className="specials-card">
-                <img src="" alt="" />
-                <h1>
-                  sa
-                  <br />
-                  shi
-                  <br />
-                  mi
-                </h1>
-              </div>
+              <SpecialsCard title="luvyou" />
             </Timeline>
           </Scene>
         </Controller>
