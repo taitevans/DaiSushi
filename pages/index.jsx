@@ -274,6 +274,7 @@ export default function Index() {
         .about-titles > h1 {
           font-size: 15vw;
           text-align: center;
+          line-height: 92%;
         }
 
         #about p,
