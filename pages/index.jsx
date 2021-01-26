@@ -62,9 +62,11 @@ export default function Index() {
         <picture>
           <source type="image/webp" srcSet="/img/sushi-platter.webp" />
           <img
-            src="/img/sushi-platter.jpg"
+            src="/img/sushi-platter.png"
             alt="Sushi platter"
             className="sushi-platter"
+            height="610"
+            width="610"
           />
         </picture>
       </section>
@@ -172,6 +174,7 @@ export default function Index() {
 
         .sushi-platter {
           position: fixed;
+          width: 80vh;
           height: 80vh;
           transform: translate(60%, 56px) rotate(0deg);
           top: 0;
