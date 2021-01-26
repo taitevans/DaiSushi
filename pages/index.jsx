@@ -252,6 +252,7 @@ export default function Index() {
           grid-column-start: 1;
           grid-column-end: 3;
           width: 100%;
+          margin-bottom: 16px;
         }
 
         @supports (-webkit-text-stroke: #fff) {
@@ -265,19 +266,25 @@ export default function Index() {
           .about-titles > h1:nth-child(3),
           .about-titles > h1:nth-child(3)::selection,
           .about-titles > h1:nth-child(3)::-webkit-selection {
-            -webkit-text-stroke: none;
+            -webkit-text-stroke: 0;
             color: var(--green);
           }
         }
 
         .about-titles > h1 {
-          line-height: 80%;
+          font-size: 15vw;
+          text-align: center;
+        }
+
+        #about p,
+        #about .about-titles {
+          grid-column-start: 1;
+          grid-column-end: 5;
+          width: 100%;
         }
 
         #about p {
-          grid-column-start: 3;
-          grid-column-end: 5;
-          width: 100%;
+          padding: 0 16px;
         }
 
         @media only screen and (min-width: 840px) {
