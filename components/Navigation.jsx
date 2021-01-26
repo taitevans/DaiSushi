@@ -29,7 +29,7 @@ const Navigation = (props) => (
       </Link>
 
       <div className="social-divider"></div>
-      <div className="social-links">
+      <div style={{ "--delay": 4 }} className="social-links">
         <a href="https://instagram.com/">
           <InstagramIcon />
         </a>
@@ -76,12 +76,19 @@ const Navigation = (props) => (
         transition-delay: 0.2s;
       }
 
+      .social-links {
+        display: flex;
+        margin-right: 0;
+        opacity: 0;
+      }
+
       .toggled {
         opacity: 1;
         pointer-events: auto;
       }
 
-      .toggled > a {
+      .toggled > a,
+      .toggled > .social-links {
         opacity: 1;
         transform: translateX(0);
         transition: all cubic-bezier(0.01, 0.31, 0.11, 0.93) 0.6s;
@@ -90,11 +97,6 @@ const Navigation = (props) => (
 
       .social-divider {
         display: none;
-      }
-
-      .social-links {
-        display: flex;
-        margin-right: 0;
       }
 
       a {
@@ -131,6 +133,7 @@ const Navigation = (props) => (
 
         .social-links {
           margin-right: -12px;
+          opacity: 1;
         }
       }
     `}</style>
