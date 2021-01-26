@@ -101,7 +101,7 @@ export default function Index() {
           </Scene>
         </Controller>
       </section>
-      <section>
+      <section id="menu">
         <h2>
           But wait...
           <br />
@@ -222,6 +222,10 @@ export default function Index() {
           width: 100%;
           z-index: -5;
           background-color: var(--bg);
+        }
+
+        #menu {
+          padding: 116px 0 134px 0;
         }
 
         #about {
