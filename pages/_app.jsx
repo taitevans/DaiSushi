@@ -75,6 +75,62 @@ const App = ({ Component, pageProps }) => (
         text-decoration: none;
       }
 
+      h1 {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 5.812em;
+        line-height: 102.5%;
+        letter-spacing: -1.5px;
+      }
+
+      h2 {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.625em;
+        line-height: 110%;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.1em;
+      }
+
+      h3 {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.938em;
+        line-height: 123.5%;
+        letter-spacing: -1.5px;
+        margin-bottom: 0.1em;
+      }
+
+      h4 {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.062em;
+        line-height: 136.5%;
+        letter-spacing: 0.25px;
+        margin-bottom: 0.1em;
+      }
+
+      h5 {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.438em;
+        line-height: 138.5%;
+        margin-bottom: 0.1em;
+      }
+
+      h6 {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.188em;
+        line-height: 120%;
+        margin-bottom: 0.1em;
+      }
 
       .p2 {
         font-family: "Inter";
