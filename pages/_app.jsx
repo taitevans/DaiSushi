@@ -74,6 +74,15 @@ const App = ({ Component, pageProps }) => (
       }
 
 
+      .p2 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.875em;
+        line-height: 17px;
+        letter-spacing: 0.25px;
+      }
+
       button {
         background-color: transparent;
         border: none;
