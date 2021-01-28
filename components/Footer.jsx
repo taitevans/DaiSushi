@@ -38,6 +38,7 @@ const Footer = () => (
       footer {
         background-color: var(--bg-2);
         padding: 48px 0 22px 0;
+        overflow: hidden;
       }
 
       .footer-content {
@@ -50,7 +51,7 @@ const Footer = () => (
       .nav-links {
         display: flex;
         margin: 0 auto;
-        padding: 22px 0 32px;
+        padding: 22px 0 32px 0;
       }
 
       .footer-info {
