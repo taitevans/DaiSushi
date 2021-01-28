@@ -1,5 +1,5 @@
 ---
-title: Terms & Conditions
+title: Terms & Conditions for DaiSushi
 description: "Terms & Conditions"
 ---
 
