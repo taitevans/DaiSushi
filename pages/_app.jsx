@@ -132,12 +132,22 @@ const App = ({ Component, pageProps }) => (
         margin-bottom: 0.1em;
       }
 
+      p,
+      a {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1em;
+        line-height: 120%;
+        letter-spacing: 0.5px;
+      }
+
       .p2 {
         font-family: "Inter";
         font-style: normal;
         font-weight: 400;
         font-size: 0.875em;
-        line-height: 17px;
+        line-height: 120%;
         letter-spacing: 0.25px;
       }
 
