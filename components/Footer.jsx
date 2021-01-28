@@ -30,6 +30,7 @@ const Footer = () => (
     <style global jsx>{`
       footer a {
         color: var(--text-inv);
+        padding: 12px;
       }
     `}</style>
 

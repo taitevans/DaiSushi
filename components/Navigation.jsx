@@ -37,15 +37,14 @@ const Navigation = (props) => (
         transition-delay: 0.2s;
       }
 
-      .toggled > a,
-      .toggled > .social-links {
+      .toggled > a {
         opacity: 1;
         transform: translateX(0);
         transition: all cubic-bezier(0.01, 0.31, 0.11, 0.93) 0.6s;
         transition-delay: calc(0.07s * var(--delay));
       }
 
-      a {
+      nav a {
         padding: 12px;
         color: inherit;
         display: flex;
@@ -78,6 +77,13 @@ const Navigation = (props) => (
         display: flex;
         margin-right: 0;
         opacity: 0;
+      }
+
+      .toggled > .social-links {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all cubic-bezier(0.01, 0.31, 0.11, 0.93) 0.6s;
+        transition-delay: calc(0.07s * var(--delay));
       }
 
       .toggled {
