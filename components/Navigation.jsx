@@ -1,4 +1,4 @@
-import Link from "next/link";
+import NavigationLinks from "./NavigationLinks";
 import InstagramIcon from "./InstagramIcon";
 import FacebookIcon from "./FacebookIcon";
 
@@ -9,25 +9,7 @@ const Navigation = (props) => (
         props.drawer ? "drawer" : ""
       } ${props.colour}-drawer`}
     >
-      <Link href="/order/">
-        <a style={{ "--delay": 0 }}>Order</a>
-      </Link>
-      <Link href="/menu/">
-        <a style={{ "--delay": 1 }}>Menu</a>
-      </Link>
-      <Link href="/stores/">
-        <a style={{ "--delay": 2 }}>Stores</a>
-      </Link>
-      <Link href="/about/">
-        <a style={{ "--delay": 3 }}>About us</a>
-      </Link>
-      <Link href="/careers/">
-        <a style={{ "--delay": 4 }}>Careers</a>
-      </Link>
-      <Link href="/contact/">
-        <a style={{ "--delay": 5 }}>Contact</a>
-      </Link>
-
+      <NavigationLinks />
       <div className="social-divider"></div>
       <div style={{ "--delay": 4 }} className="social-links">
         <a href="https://instagram.com/">
@@ -38,6 +20,37 @@ const Navigation = (props) => (
         </a>
       </div>
     </nav>
+
+    <style global jsx>{`
+      .drawer > a {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 3em;
+        line-height: 84%;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.1em;
+        text-transform: uppercase;
+        transform: translateX(90px);
+        opacity: 0;
+        transition: all 0.001s;
+        transition-delay: 0.2s;
+      }
+
+      .toggled > a,
+      .toggled > .social-links {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all cubic-bezier(0.01, 0.31, 0.11, 0.93) 0.6s;
+        transition-delay: calc(0.07s * var(--delay));
+      }
+
+      a {
+        padding: 12px;
+        color: inherit;
+        display: flex;
+      }
+    `}</style>
 
     <style jsx>{`
       nav {
@@ -61,21 +74,6 @@ const Navigation = (props) => (
         padding: 0 16px;
       }
 
-      .drawer > a {
-        font-family: "M PLUS Rounded 1c", sans-serif;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 3em;
-        line-height: 84%;
-        letter-spacing: -0.5px;
-        margin-bottom: 0.1em;
-        text-transform: uppercase;
-        transform: translateX(90px);
-        opacity: 0;
-        transition: all 0.001s;
-        transition-delay: 0.2s;
-      }
-
       .social-links {
         display: flex;
         margin-right: 0;
@@ -87,22 +85,8 @@ const Navigation = (props) => (
         pointer-events: auto;
       }
 
-      .toggled > a,
-      .toggled > .social-links {
-        opacity: 1;
-        transform: translateX(0);
-        transition: all cubic-bezier(0.01, 0.31, 0.11, 0.93) 0.6s;
-        transition-delay: calc(0.07s * var(--delay));
-      }
-
       .social-divider {
         display: none;
-      }
-
-      a {
-        padding: 12px;
-        color: inherit;
-        display: flex;
       }
 
       @media only screen and (min-width: 840px) {
