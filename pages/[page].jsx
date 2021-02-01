@@ -37,11 +37,13 @@ export const getStaticProps = async ({ params: { page } }) => {
   const parsedMarkdown = matter(markdownWithMetadata);
 
   const htmlString = marked(parsedMarkdown.content);
+  const rawData = parsedMarkdown.content;
 
   return {
     props: {
       htmlString,
       data: parsedMarkdown.data,
+      rawData: rawData,
     },
   };
 };
