@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy for DaiSushi
 description: "Privacy Policy"
+table: false
 ---
 
 <h2 style="color:#f00">!!! This is not a real Privacy Policy document !!!</h2>

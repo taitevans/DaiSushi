@@ -1,6 +1,7 @@
 ---
 title: Terms & Conditions for DaiSushi
 description: "Terms & Conditions"
+table: false
 ---
 
 <h2 style="color:#f00">!!! This is not a real Terms & Conditions document !!!</h2>
