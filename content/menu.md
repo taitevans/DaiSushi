@@ -1,6 +1,7 @@
 ---
 title: Menu
-description: Take a look at our award winning sushi!
+description: "Take a look at our award winning sushi!"
+table: true
 ---
 
 | title                    | description                                 | image | price |
