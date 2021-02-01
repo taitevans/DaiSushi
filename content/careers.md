@@ -4,4 +4,4 @@ description: "Come join the DaiSushi family"
 table: false
 ---
 
-#### Positons available
+#### Positions available
