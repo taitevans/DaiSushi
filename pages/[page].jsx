@@ -13,7 +13,15 @@ const Page = ({ htmlString, data, tableCells }) => (
     <h1>{data.title}</h1>
     {data.table === true &&
       Object.keys(tableCells).map((key, i) => (
-        <div key={i}>{tableCells[key][0][0].text}</div>
+        <div key={i}>
+          <h3>{tableCells[key][0][0].text}</h3>
+          <p>{tableCells[key][1][0].text}</p>
+          <p>{tableCells[key][2][0].text}</p>
+          <img
+            src={tableCells[key][3][0] ? tableCells[key][3][0].text : ""}
+            alt="Image"
+          />
+        </div>
       ))}
     {data.table === false && (
       <div dangerouslySetInnerHTML={{ __html: htmlString }} />
