@@ -7,7 +7,7 @@ const Footer = () => (
     <footer>
       <div className="container">
         <div className="footer-content">
-          <Logo size="2" theme="dark" />
+          <Logo size={2} theme="dark" />
           <div className="nav-links">
             <NavigationLinks />
           </div>

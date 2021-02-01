@@ -5,7 +5,7 @@ const Logo = (props) => (
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 78 24"
-      height={props.size ? String(24 * parseFloat(props.size)) : "24"}
+      height={props.size ? String(Math.round(24 * props.size)) : "24"}
     >
       <path
         fill="#071502"

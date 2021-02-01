@@ -38,7 +38,7 @@ export default function Header() {
       <header>
         <Link href="/">
           <a className="logo">
-            <Logo size="2" colour={toggleColour} navToggled={isToggled} />
+            <Logo size={2} colour={toggleColour} navToggled={isToggled} />
           </a>
         </Link>
         <button
