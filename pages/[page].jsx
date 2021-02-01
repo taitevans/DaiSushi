@@ -4,11 +4,7 @@ import matter from "gray-matter";
 import Head from "next/head";
 import marked from "marked";
 
-export default function Page({ htmlString, data, rawData }) {
-  let item = data.table
-    ? require("mdtable2json").getTables(rawData)[0].json
-    : null;
-  let itemKeys = data.table ? Object.keys(item[0]) : null;
+export default function Page({ htmlString, data, tableCells }) {
   return (
     <>
       <Head>
@@ -17,8 +13,8 @@ export default function Page({ htmlString, data, rawData }) {
       </Head>
       <h1>{data.title}</h1>
       {data.table === true &&
-        Object.keys(item).map((key, i) => (
-          <div key={i}>{item[key][itemKeys[0]]}</div>
+        Object.keys(tableCells).map((key, i) => (
+          <div key={i}>{tableCells[key][0][0].text}</div>
         ))}
       {data.table === false && (
         <div dangerouslySetInnerHTML={{ __html: htmlString }} />
@@ -47,15 +43,18 @@ export const getStaticProps = async ({ params: { page } }) => {
     .toString();
 
   const parsedMarkdown = matter(markdownWithMetadata);
-
   const htmlString = marked(parsedMarkdown.content);
-  const rawData = parsedMarkdown.content;
+
+  const tokens = parsedMarkdown.data.table
+    ? marked.lexer(parsedMarkdown.content)
+    : "";
+  const tableCells = parsedMarkdown.data.table ? tokens[0].tokens.cells : "";
 
   return {
     props: {
       htmlString,
       data: parsedMarkdown.data,
-      rawData: rawData,
+      tableCells: tableCells,
     },
   };
 };
