@@ -10,7 +10,9 @@ const Page = ({ htmlString, data, tableCells }) => (
       <title>{data.title}</title>
       <meta title="description" content={data.description} />
     </Head>
-    <h1>{data.title}</h1>
+    <div className="hero">
+      <h2>{data.title}</h2>
+    </div>
     {data.table === true &&
       Object.keys(tableCells).map((key, i) => (
         <div key={i}>
@@ -26,6 +28,15 @@ const Page = ({ htmlString, data, tableCells }) => (
     {data.table === false && (
       <div dangerouslySetInnerHTML={{ __html: htmlString }} />
     )}
+
+    <style jsx>{`
+      .hero {
+        min-height: 272px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    `}</style>
   </>
 );
 
