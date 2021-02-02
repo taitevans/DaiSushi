@@ -28,6 +28,25 @@ const Page = ({ htmlString, data, tableCells }) => (
     {data.table === false && (
       <div dangerouslySetInnerHTML={{ __html: htmlString }} />
     )}
+    <div className="container">
+      <div className="content">
+        {data.table === true &&
+          Object.keys(tableCells).map((key, i) => (
+            <div key={i}>
+              <h3>{tableCells[key][0][0].text}</h3>
+              <p>{tableCells[key][1][0].text}</p>
+              <p>{tableCells[key][2][0].text}</p>
+              <img
+                src={tableCells[key][3][0] ? tableCells[key][3][0].text : ""}
+                alt="Image"
+              />
+            </div>
+          ))}
+        {data.table === false && (
+          <div dangerouslySetInnerHTML={{ __html: htmlString }} />
+        )}
+      </div>
+    </div>
 
     <style jsx>{`
       .hero {
@@ -35,6 +54,13 @@ const Page = ({ htmlString, data, tableCells }) => (
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+
+      .content {
+        padding: 24px 0 104px 0;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        width: 100%;
       }
     `}</style>
   </>
