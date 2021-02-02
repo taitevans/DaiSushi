@@ -14,7 +14,7 @@ const Page = ({ htmlString, data, tableCells }) => (
       <h2>{data.title}</h2>
     </div>
     <div className="container">
-      <div className="content">
+      <article>
         {data.table === true &&
           // Map table to jsx
           Object.keys(tableCells).map((key, i) => (
@@ -32,7 +32,7 @@ const Page = ({ htmlString, data, tableCells }) => (
           // Insert markdown
           <div dangerouslySetInnerHTML={{ __html: htmlString }} />
         )}
-      </div>
+      </article>
     </div>
 
     <style jsx>{`
@@ -43,7 +43,7 @@ const Page = ({ htmlString, data, tableCells }) => (
         justify-content: center;
       }
 
-      .content {
+      article {
         padding: 24px 0 104px 0;
         grid-column-start: 1;
         grid-column-end: 5;
