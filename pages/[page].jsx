@@ -16,6 +16,7 @@ const Page = ({ htmlString, data, tableCells }) => (
     <div className="container">
       <div className="content">
         {data.table === true &&
+          // Map table to jsx
           Object.keys(tableCells).map((key, i) => (
             <div key={i}>
               <h3>{tableCells[key][0][0].text}</h3>
@@ -28,6 +29,7 @@ const Page = ({ htmlString, data, tableCells }) => (
             </div>
           ))}
         {data.table === false && (
+          // Insert markdown
           <div dangerouslySetInnerHTML={{ __html: htmlString }} />
         )}
       </div>
@@ -70,9 +72,11 @@ export const getStaticProps = async ({ params: { page } }) => {
     .readFileSync(path.join("content", page + ".md"))
     .toString();
 
+  // Normal page data
   const parsedMarkdown = matter(markdownWithMetadata);
   const htmlString = marked(parsedMarkdown.content);
 
+  // List page data
   const tokens = parsedMarkdown.data.table
     ? marked.lexer(parsedMarkdown.content)
     : "";
