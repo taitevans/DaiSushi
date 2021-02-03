@@ -324,6 +324,10 @@ export default function Index() {
           width: 100%;
         }
 
+        #order {
+          padding: 86px 0 146px 0;
+        }
+
         #order h2 {
           grid-column-start: 1;
           grid-column-end: 5;
@@ -333,14 +337,15 @@ export default function Index() {
         .order-card {
           width: 100%;
           grid-column: span 4;
-          background: #ccc;
           display: flex;
           flex-direction: column;
           align-items: center;
+          padding: 62px 0 34px 0;
         }
 
         .order-card p {
           color: #000;
+          margin-top: 16px;
         }
 
         .order-card svg {
@@ -407,7 +412,6 @@ export default function Index() {
           .order-card {
             width: 100%;
             grid-column: span 4;
-            background: #ccc;
           }
         }
       `}</style>
