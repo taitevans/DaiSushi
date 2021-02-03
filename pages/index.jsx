@@ -158,25 +158,25 @@ export default function Index() {
           <h2>Come Make an Order</h2>
           <a
             href="https://www.ubereats.com/"
-            className="order-card p2"
+            className="order-card"
             rel="noreferrer noopener"
           >
             <UberEatsLogo />
-            <p>Uber</p>
+            <p className="p2">Uber</p>
           </a>
           <a
             href="https://www.doordash.com/"
-            className="order-card p2"
+            className="order-card"
             target="_blank"
             rel="noreferrer noopener"
           >
             <DoorDashLogo />
-            <p>DoorDash</p>
+            <p className="p2">DoorDash</p>
           </a>
           <Link href="/stores/">
-            <a className="order-card p2">
+            <a className="order-card">
               <StoreIcon />
-              <p>In-Store</p>
+              <p className="p2">In-Store</p>
             </a>
           </Link>
         </div>
