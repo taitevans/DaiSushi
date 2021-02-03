@@ -153,18 +153,29 @@ export default function Index() {
       <section id="order">
         <div className="container">
           <h2>Come Make an Order</h2>
-          <a href="" className="order-card">
+          <a
+            href="https://www.ubereats.com/"
+            className="order-card p2"
+            rel="noreferrer noopener"
+          >
             <svg></svg>
             <p>Uber</p>
           </a>
-          <a href="" className="order-card">
+          <a
+            href="https://www.doordash.com/"
+            className="order-card p2"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <svg></svg>
             <p>DoorDash</p>
           </a>
-          <a href="" className="order-card">
-            <svg></svg>
-            <p>In-Store</p>
-          </a>
+          <Link href="/stores/">
+            <a className="order-card p2">
+              <svg></svg>
+              <p>In-Store</p>
+            </a>
+          </Link>
         </div>
       </section>
 
