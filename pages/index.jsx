@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 import SpecialsCard from "../components/SpecialsCard";
-import UberEeatsLogo from "../components/UberEeatsLogo";
 import DoorDashLogo from "../components/DoorDashLogo";
 import StoreIcon from "../components/StoreIcon";
 import UberEatsLogo from "../components/UberEeatsLogo";
