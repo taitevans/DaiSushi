@@ -73,7 +73,7 @@ export default function Index() {
 
       <section id="specials">
         <Controller>
-          <Scene indicators={true} duration="1600">
+          <Scene indicators={false} duration="1600">
             <Timeline target={<div className="specials-bg" />}>
               <Tween
                 from={{
