@@ -192,6 +192,8 @@ const App = ({ Component, pageProps }) => (
         }
 
         .container {
+          grid-template-columns: repeat(12, 1fr);
+          grid-column-gap: 24px;
           max-width: 960px;
           margin: 0 auto;
         }
