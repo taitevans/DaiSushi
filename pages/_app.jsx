@@ -183,6 +183,10 @@ const App = ({ Component, pageProps }) => (
         color: var(--text-2);
       }
       @media only screen and (min-width: 840px) {
+        main {
+          padding: 56px 0 0 0;
+        }
+
         .no-body-scroll {
           overflow-y: auto;
         }
