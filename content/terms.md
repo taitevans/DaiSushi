@@ -1,6 +1,6 @@
 ---
-description: "Terms & Conditions"
 title: Terms & Conditions
+description:
 table: false
 ---
 

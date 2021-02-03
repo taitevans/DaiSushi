@@ -1,6 +1,6 @@
 ---
-description: "Privacy Policy"
 title: Privacy Policy
+description:
 table: false
 ---
 
