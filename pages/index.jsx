@@ -3,6 +3,10 @@ import Link from "next/link";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 import SpecialsCard from "../components/SpecialsCard";
+import UberEeatsLogo from "../components/UberEeatsLogo";
+import DoorDashLogo from "../components/DoorDashLogo";
+import StoreIcon from "../components/StoreIcon";
+import UberEatsLogo from "../components/UberEeatsLogo";
 
 export default function Index() {
   const [bg, setBg] = useState({
@@ -158,7 +162,7 @@ export default function Index() {
             className="order-card p2"
             rel="noreferrer noopener"
           >
-            <svg></svg>
+            <UberEatsLogo />
             <p>Uber</p>
           </a>
           <a
@@ -167,12 +171,12 @@ export default function Index() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <svg></svg>
+            <DoorDashLogo />
             <p>DoorDash</p>
           </a>
           <Link href="/stores/">
             <a className="order-card p2">
-              <svg></svg>
+              <StoreIcon />
               <p>In-Store</p>
             </a>
           </Link>
