@@ -219,7 +219,8 @@ export default function Index() {
           font-size: 16vw;
         }
 
-        #specials {
+        #specials,
+        .menu-content {
           grid-column-start: 1;
           grid-column-end: 5;
           width: 100%;
@@ -239,6 +240,10 @@ export default function Index() {
 
         #menu {
           padding: 116px 0 134px 0;
+        }
+
+        .menu-content {
+          position: static;
         }
 
         #about {
