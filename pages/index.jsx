@@ -328,6 +328,7 @@ export default function Index() {
           }
 
           .about-titles {
+            margin-bottom: 0;
             position: absolute;
           }
 
