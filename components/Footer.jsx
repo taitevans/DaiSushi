@@ -52,6 +52,7 @@ const Footer = () => (
         display: flex;
         margin: 0 auto;
         padding: 22px 0 32px 0;
+        overflow: hidden;
       }
 
       .footer-info {
@@ -68,6 +69,12 @@ const Footer = () => (
 
       .copyright {
         padding: 12px;
+      }
+      @media only screen and (min-width: 840px) {
+        .footer-content {
+          grid-column-start: 1;
+          grid-column-end: 13;
+        }
       }
     `}</style>
   </>
