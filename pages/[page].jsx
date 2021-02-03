@@ -8,7 +8,9 @@ const Page = ({ htmlString, data, tableCells }) => (
   <>
     <Head>
       <title>{data.title}</title>
-      <meta title="description" content={data.description} />
+      {data.description != false && (
+        <meta title="description" content={data.description} />
+      )}
     </Head>
     <div className="hero">
       <h2>{data.title}</h2>
