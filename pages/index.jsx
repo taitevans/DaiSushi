@@ -150,6 +150,23 @@ export default function Index() {
           quidem et.
         </p>
       </section>
+      <section id="order">
+        <div className="container">
+          <h2>Come Make an Order</h2>
+          <a href="" className="order-card">
+            <svg></svg>
+            <p>Uber</p>
+          </a>
+          <a href="" className="order-card">
+            <svg></svg>
+            <p>DoorDash</p>
+          </a>
+          <a href="" className="order-card">
+            <svg></svg>
+            <p>In-Store</p>
+          </a>
+        </div>
+      </section>
 
       <style global jsx>{`
         .buttons > a {
@@ -292,6 +309,31 @@ export default function Index() {
           width: 100%;
         }
 
+        #order h2 {
+          grid-column-start: 1;
+          grid-column-end: 5;
+          text-align: center;
+        }
+
+        .order-card {
+          width: 100%;
+          grid-column: span 4;
+          background: #ccc;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .order-card p {
+          color: #000;
+        }
+
+        .order-card svg {
+          width: 128px;
+          height: 128px;
+          fill: #000;
+        }
+
         @media only screen and (min-width: 840px) {
           .hero-title {
             font-size: 5.812em;
@@ -339,6 +381,18 @@ export default function Index() {
             margin-left: auto;
             margin-right: calc(50% + 12px);
             text-align: left;
+          }
+
+          #order h2 {
+            grid-column-start: 1;
+            grid-column-end: 13;
+            text-align: center;
+          }
+
+          .order-card {
+            width: 100%;
+            grid-column: span 4;
+            background: #ccc;
           }
         }
       `}</style>
