@@ -1,6 +1,6 @@
 ---
-title: Terms & Conditions for DaiSushi
 description: "Terms & Conditions"
+title: Terms & Conditions
 table: false
 ---
 

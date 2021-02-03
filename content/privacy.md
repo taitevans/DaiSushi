@@ -1,6 +1,6 @@
 ---
-title: Privacy Policy for DaiSushi
 description: "Privacy Policy"
+title: Privacy Policy
 table: false
 ---
 
