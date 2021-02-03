@@ -23,6 +23,9 @@ export default function Header() {
   Router.events.on("routeChangeStart", () => {
     if (isToggled) toggle(!isToggled);
   });
+  Router.events.on("hashChangeStart", () => {
+    if (isToggled) toggle(!isToggled);
+  });
 
   if (isToggled) {
     if (i >= 3) {

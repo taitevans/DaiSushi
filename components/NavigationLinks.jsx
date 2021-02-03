@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const NavigationLinks = () => (
   <>
-    <Link href="/order/">
+    <Link href="/#order">
       <a style={{ "--delay": 0 }}>Order</a>
     </Link>
     <Link href="/menu/">
