@@ -112,41 +112,43 @@ export default function Index() {
         </Controller>
       </section>
       <section id="menu">
-        <h2>
-          But wait...
-          <br />
-          There's more!
-        </h2>
-        <p>
-          Thousands of years of perfection, with a modern twist. Our range of
-          freshly made sushi is guranateed to fit any taste
-        </p>
-        <Link href="/menu/">
-          <a className="button">See Menu</a>
-        </Link>
+        <div className="container">
+          <div className="menu-content">
+            <h2>
+              But wait...
+              <br />
+              There's more!
+            </h2>
+            <p>
+              Thousands of years of perfection, with a modern twist. Our range
+              of freshly made sushi is guranateed to fit any taste
+            </p>
+            <Link href="/menu/">
+              <a className="button">See Menu</a>
+            </Link>
+          </div>
+        </div>
       </section>
       <section id="about">
-        <div className="container">
-          <div className="about-titles">
-            <h1>Sushi is art</h1>
-            <h1>Sushi is art</h1>
-            <h1>Sushi is art</h1>
-            <h1>Sushi is art</h1>
-            <h1>Sushi is art</h1>
-          </div>
-          <p>
-            Ipsa fugiat nihil culpa. Expedita adipisci dignissimos et rerum
-            officia. Et eum temporibus in tenetur distinctio totam eligendi
-            saepe. Sit et enim est error est animi qui. Velit itaque molestiae
-            qui. Architecto omnis accusantium saepe rerum. Maxime at mollitia
-            eveniet cupiditate. Placeat repellendus harum itaque error quo qui.
-            <br />
-            <br />
-            Et ullam reprehenderit quia quae qui et dolorem. Praesentium
-            voluptatum quia dolores recusandae eveniet. Ea nihil vel fugiat
-            itaque quidem et.
-          </p>
+        <div className="about-titles">
+          <h1>Sushi is art</h1>
+          <h1>Sushi is art</h1>
+          <h1>Sushi is art</h1>
+          <h1>Sushi is art</h1>
+          <h1>Sushi is art</h1>
         </div>
+        <p>
+          Ipsa fugiat nihil culpa. Expedita adipisci dignissimos et rerum
+          officia. Et eum temporibus in tenetur distinctio totam eligendi saepe.
+          Sit et enim est error est animi qui. Velit itaque molestiae qui.
+          Architecto omnis accusantium saepe rerum. Maxime at mollitia eveniet
+          cupiditate. Placeat repellendus harum itaque error quo qui.
+          <br />
+          <br />
+          Et ullam reprehenderit quia quae qui et dolorem. Praesentium
+          voluptatum quia dolores recusandae eveniet. Ea nihil vel fugiat itaque
+          quidem et.
+        </p>
       </section>
 
       <style global jsx>{`
@@ -241,12 +243,9 @@ export default function Index() {
 
         #about {
           background-color: var(--pink);
-          padding: 20px 0;
+          padding: 20px 16px;
           margin: 0 -16px;
-        }
-
-        #about .container {
-          align-items: center;
+          height: auto;
         }
 
         .about-titles {
@@ -275,9 +274,10 @@ export default function Index() {
         }
 
         .about-titles > h1 {
-          font-size: 15vw;
           text-align: center;
+          font-size: 14vw;
           line-height: 92%;
+          margin: 0 -16px;
         }
 
         #about p,
@@ -287,13 +287,52 @@ export default function Index() {
           width: 100%;
         }
 
-        #about p {
-          padding: 0 16px;
-        }
-
         @media only screen and (min-width: 840px) {
           .hero-title {
             font-size: 5.812em;
+          }
+
+          .hero-container,
+          .menu-content {
+            grid-column-start: 1;
+            grid-column-end: 13;
+          }
+
+          .menu-content {
+            grid-column-end: 7;
+          }
+
+          #about {
+            padding: 0;
+            height: calc(5.812em * 5);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+          }
+
+          #about p {
+            margin-left: 50%;
+            width: 468px;
+            padding-left: 12px;
+            z-index: 1;
+          }
+
+          #about .container {
+            min-height: calc(5.812em * 5);
+          }
+
+          .about-titles {
+            position: absolute;
+          }
+
+          .about-titles h1 {
+            font-size: 7.5vw;
+            width: fit-content;
+            right: 0;
+            margin-left: auto;
+            margin-right: calc(50% + 12px);
+            text-align: left;
           }
         }
       `}</style>
