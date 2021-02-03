@@ -12,10 +12,18 @@ const Navigation = (props) => (
       <NavigationLinks />
       <div className="social-divider"></div>
       <div style={{ "--delay": 4 }} className="social-links">
-        <a href="https://instagram.com/">
+        <a
+          href="https://instagram.com/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <InstagramIcon />
         </a>
-        <a href="https://facebook.com/">
+        <a
+          href="https://facebook.com/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <FacebookIcon />
         </a>
       </div>
