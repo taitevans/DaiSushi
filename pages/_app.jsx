@@ -46,10 +46,6 @@ const App = ({ Component, pageProps }) => (
         box-sizing: border-box;
       }
 
-      html {
-        scroll-behavior: smooth;
-      }
-
       body {
         font-family: "Inter", sans-serif;
         overflow-x: hidden;
