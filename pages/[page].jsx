@@ -38,13 +38,6 @@ const Page = ({ htmlString, data, tableCells }) => (
     </div>
 
     <style jsx>{`
-      .hero {
-        min-height: 128px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
       article {
         padding: 24px 0 104px 0;
         grid-column-start: 1;
@@ -53,10 +46,6 @@ const Page = ({ htmlString, data, tableCells }) => (
       }
 
       @media only screen and (min-width: 840px) {
-        .hero {
-          min-height: 272px;
-        }
-
         article {
           grid-column-start: 1;
           grid-column-end: 13;

@@ -182,6 +182,14 @@ const App = ({ Component, pageProps }) => (
       .button ~ .secondary:hover {
         color: var(--text-2);
       }
+
+      .hero {
+        min-height: 128px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
       @media only screen and (min-width: 840px) {
         main {
           padding: 56px 0 0 0;
@@ -196,6 +204,10 @@ const App = ({ Component, pageProps }) => (
           grid-column-gap: 24px;
           max-width: 960px;
           margin: 0 auto;
+        }
+
+        .hero {
+          min-height: 272px;
         }
       }
     `}</style>
