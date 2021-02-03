@@ -192,7 +192,7 @@ const App = ({ Component, pageProps }) => (
 
       @media only screen and (min-width: 840px) {
         main {
-          padding: 56px 0 0 0;
+          padding: 56px 24px 0 24px;
         }
 
         .no-body-scroll {
