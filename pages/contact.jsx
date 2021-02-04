@@ -45,10 +45,13 @@ const Contact = () => (
       form {
         display: flex;
         flex-direction: column;
+        font-family: "Inter";
+        font-size: 1em;
       }
 
       textarea {
         max-width: 100%;
+        font-family: "Inter";
       }
 
       .text {
