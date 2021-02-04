@@ -74,12 +74,14 @@ const Contact = () => (
         border: 2px var(--pink) solid;
       }
 
-      .text {
-        order: -1;
+      button {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
       }
 
-      button {
-        text-align: center;
+      .text {
+        order: -1;
       }
 
       @media only screen and (min-width: 840px) {
@@ -87,10 +89,15 @@ const Contact = () => (
           padding-top: 0;
         }
 
+        button {
+          width: fit-content;
+        }
+
         form,
         .text {
           grid-column: span 6;
         }
+
         .text {
           order: 1;
         }
