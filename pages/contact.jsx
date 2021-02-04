@@ -58,6 +58,7 @@ const Contact = () => (
 
       textarea {
         max-width: 100%;
+        min-width: 100%;
         font-family: "Inter", sans-serif;
       }
 
