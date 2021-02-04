@@ -51,14 +51,14 @@ const Contact = () => (
       form {
         display: flex;
         flex-direction: column;
-        font-family: "Inter";
+        font-family: "Inter", sans-serif;
         font-size: 1em;
         padding-top: 32px;
       }
 
       textarea {
         max-width: 100%;
-        font-family: "Inter";
+        font-family: "Inter", sans-serif;
       }
 
       input,
