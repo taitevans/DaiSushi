@@ -174,6 +174,12 @@ const App = ({ Component, pageProps }) => (
         background-color: var(--pink-2);
       }
 
+      .button:focus {
+        background-color: var(--pink-2);
+        color: var(--text-inv);
+        outline: none;
+      }
+
       .button ~ .secondary,
       .button ~ .secondary:hover {
         background-color: rgba(0, 0, 0, 0);
