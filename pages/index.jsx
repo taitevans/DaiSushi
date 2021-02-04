@@ -375,6 +375,7 @@ export default function Index() {
             align-items: center;
             overflow: hidden;
             position: relative;
+            margin: 0 -24px;
           }
 
           #about p {
