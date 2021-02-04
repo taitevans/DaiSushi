@@ -105,7 +105,7 @@ const App = ({ Component, pageProps }) => (
         font-style: normal;
         font-weight: 500;
         font-size: 2.062em;
-        line-height: 136.5%;
+        line-height: 106.5%;
         letter-spacing: 0.25px;
         margin-bottom: 0.1em;
       }
