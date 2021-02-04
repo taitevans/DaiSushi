@@ -23,7 +23,8 @@ const Contact = () => (
       <div className="text">
         <h4>Get in contact with us</h4>
         <p>
-          We love customer feedback and questions, please use this conteact form
+          We love customer feedback and questions, please use this form for
+          general enquiries, complaints, feedback, etc
         </p>
         <p>
           For employment enquiries, please see our{" "}
