@@ -42,8 +42,7 @@ const Footer = () => (
       }
 
       .footer-content {
-        grid-column-start: 1;
-        grid-column-end: 5;
+        grid-column: span 4;
         display: flex;
         flex-direction: column;
       }
@@ -72,8 +71,7 @@ const Footer = () => (
       }
       @media only screen and (min-width: 840px) {
         .footer-content {
-          grid-column-start: 1;
-          grid-column-end: 13;
+          grid-column: span 12;
         }
       }
     `}</style>

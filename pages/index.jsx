@@ -270,8 +270,7 @@ export default function Index() {
         }
 
         .hero-container {
-          grid-column-start: 1;
-          grid-column-end: 5;
+          grid-column: span 4;
           width: 100%;
           height: 80vh;
           display: flex;
@@ -285,8 +284,7 @@ export default function Index() {
 
         #specials,
         .menu-content {
-          grid-column-start: 1;
-          grid-column-end: 5;
+          grid-column: span 4;
           width: 100%;
           position: relative;
         }
@@ -320,8 +318,7 @@ export default function Index() {
         .about-titles {
           color: var(--green);
           text-transform: uppercase;
-          grid-column-start: 1;
-          grid-column-end: 3;
+          grid-column: span 2;
           width: 100%;
           margin-bottom: 16px;
         }
@@ -351,8 +348,7 @@ export default function Index() {
 
         #about p,
         #about .about-titles {
-          grid-column-start: 1;
-          grid-column-end: 5;
+          grid-column: span 4;
           width: 100%;
         }
 
@@ -361,8 +357,7 @@ export default function Index() {
         }
 
         #order h2 {
-          grid-column-start: 1;
-          grid-column-end: 5;
+          grid-column: span 4;
           text-align: center;
         }
 
@@ -391,14 +386,12 @@ export default function Index() {
             font-size: 5.812em;
           }
 
-          .hero-container,
-          .menu-content {
-            grid-column-start: 1;
-            grid-column-end: 13;
+          .hero-container {
+            grid-column: span 12;
           }
 
           .menu-content {
-            grid-column-end: 7;
+            grid-column: span 6;
           }
 
           #about {
@@ -436,8 +429,7 @@ export default function Index() {
           }
 
           #order h2 {
-            grid-column-start: 1;
-            grid-column-end: 13;
+            grid-column: span 12;
             text-align: center;
           }
 

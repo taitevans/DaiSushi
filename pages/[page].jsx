@@ -40,15 +40,13 @@ const Page = ({ htmlString, data, tableCells }) => (
     <style jsx>{`
       article {
         padding: 24px 0 104px 0;
-        grid-column-start: 1;
-        grid-column-end: 5;
+        grid-column: span 4;
         width: 100%;
       }
 
       @media only screen and (min-width: 840px) {
         article {
-          grid-column-start: 1;
-          grid-column-end: 13;
+          grid-column: span 12;
         }
       }
     `}</style>
