@@ -33,9 +33,17 @@ export default function StarRating(props) {
   }
 
   return (
-    <div className="stars">
-      {starList}
-      {halfStarList}
-    </div>
+    <>
+      <div className="stars">
+        {starList}
+        {halfStarList}
+      </div>
+
+      <style jsx>{`
+        .stars {
+          display: inline-flex;
+        }
+      `}</style>
+    </>
   );
 }
