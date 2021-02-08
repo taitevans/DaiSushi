@@ -403,11 +403,17 @@ export default function Index() {
         .map {
           grid-column: span 4;
           width: 100%;
+          display: flex;
+          margin: 34px 0;
         }
 
         .map img {
           width: 100%;
           border-radius: 24px;
+        }
+
+        #locations {
+          padding: 142px 0 84px 0;
         }
 
         #locations .button {
