@@ -4,8 +4,11 @@ description: "We have stores all across Melbourne, find the closest one to you"
 table: true
 ---
 
-| location          | address                                    | phone        | image |
-| ----------------- | ------------------------------------------ | ------------ | ----- |
-| Melbourne Central | Complex 8 Whiteman St, Shop 102, Melbourne | 0000 000 000 |       |
-| Fitzroy           | Complex 8 Whiteman St, Shop 102, Melbourne | 0000 000 000 |       |
-| Melbourne Central | Complex 8 Whiteman St, Shop 102, Melbourne | 0000 000 000 |       |
+| location          | address                           | phone           | image |
+| ----------------- | --------------------------------- | --------------- | ----- |
+| Melbourne Central | 211 La Trobe St, Melbourne        | +61 010 020 001 |       |
+| Fitzroy           | 95/103 Johnston St, Fitzroy       | +61 001 000 010 |       |
+| Dandenong         | 23-26 Princess Hwy, Dandenong     | +61 100 100 100 |       |
+| Geelong           | 166/188 Shannon Ave, Geelong West | +61 210 011 002 |       |
+| Pakenham          | 67/69 Main St, Pakenham           | +61 001 011 000 |       |
+| Frankston         | Ross Smith Ave W, Frankston       | +61 000 120 100 |       |
