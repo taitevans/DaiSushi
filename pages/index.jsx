@@ -6,6 +6,7 @@ import SpecialsCard from "../components/SpecialsCard";
 import DoorDashLogo from "../components/DoorDashLogo";
 import StoreIcon from "../components/StoreIcon";
 import UberEatsLogo from "../components/UberEeatsLogo";
+import TestimonialCard from "../components/Testimonials/Card";
 
 export default function Index() {
   const [bg, setBg] = useState({
@@ -179,6 +180,38 @@ export default function Index() {
               <p className="p2">In-Store</p>
             </a>
           </Link>
+        </div>
+      </section>
+      <section id="testimonials">
+        <div className="container">
+          <TestimonialCard
+            avatar="1"
+            name="Tyrell W"
+            review="Elliot social engineered me into eating here"
+            stars={5}
+            colour="red"
+          />
+          <TestimonialCard
+            avatar="2"
+            name="Stephanie V"
+            review="Whoever made the website did a great job, you should hire them!"
+            stars={5}
+            colour="green"
+          />
+          <TestimonialCard
+            avatar="3"
+            name="Julia H"
+            review="I'm no copy writer, but this food was excellent, would eat here again"
+            stars={5}
+            colour="orange"
+          />
+          <TestimonialCard
+            avatar="4"
+            name="Dylan M"
+            review="Decent sushi, friendly staff. I'm a hard guy to impress though, so only 4 and a half stars"
+            stars={4.5}
+            colour="pink"
+          />
         </div>
       </section>
 
