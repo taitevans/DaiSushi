@@ -1,6 +1,6 @@
 ---
 title: Stores
-description: "We have stores all across Australia, find the closest one to you"
+description: "We have stores all across Melbourne, find the closest one to you"
 table: true
 ---
 
