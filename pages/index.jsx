@@ -431,8 +431,7 @@ export default function Index() {
             font-size: 7.5vw;
             width: fit-content;
             right: 0;
-            margin-left: auto;
-            margin-right: calc(50% + 12px);
+            margin: 0 calc(50% + 12px) 0 auto;
             text-align: left;
           }
 
