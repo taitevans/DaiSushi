@@ -219,6 +219,20 @@ export default function Index() {
         </div>
       </section>
 
+      <section id="locations">
+        <div className="container">
+          <h2>Find a Store</h2>
+          {/* Google had issues with payment details, so no Maps API */}
+          <picture className="map">
+            <source type="image/webp" srcSet="/img/map.webp" />
+            <img src="/img/map.jpg" alt="Melbourne map" />
+          </picture>
+          <Link href="/stores/">
+            <a className="button">See all</a>
+          </Link>
+        </div>
+      </section>
+
       <style global jsx>{`
         .buttons > a {
           width: fit-content;
@@ -360,7 +374,8 @@ export default function Index() {
           padding: 86px 0 146px 0;
         }
 
-        #order h2 {
+        #order h2,
+        #locations h2 {
           grid-column: span 4;
           text-align: center;
         }
@@ -383,6 +398,21 @@ export default function Index() {
           width: 128px;
           height: 128px;
           fill: #000;
+        }
+
+        .map {
+          grid-column: span 4;
+          width: 100%;
+        }
+
+        .map img {
+          width: 100%;
+          border-radius: 24px;
+        }
+
+        #locations .button {
+          grid-column: span 4;
+          margin: 0 auto;
         }
 
         @media only screen and (min-width: 840px) {
@@ -432,7 +462,8 @@ export default function Index() {
             text-align: left;
           }
 
-          #order h2 {
+          #order h2,
+          #locations h2 {
             grid-column: span 12;
             text-align: center;
           }
@@ -440,6 +471,14 @@ export default function Index() {
           .order-card {
             width: 100%;
             grid-column: span 4;
+          }
+
+          .map {
+            grid-column: span 12;
+          }
+
+          #locations .button {
+            grid-column: span 12;
           }
         }
       `}</style>
