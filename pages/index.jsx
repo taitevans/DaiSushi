@@ -115,6 +115,7 @@ export default function Index() {
           </Scene>
         </Controller>
       </section>
+
       <section id="menu">
         <div className="container">
           <div className="menu-content">
@@ -133,6 +134,7 @@ export default function Index() {
           </div>
         </div>
       </section>
+
       <section id="about">
         <div className="about-titles">
           <h1>Sushi is art</h1>
@@ -154,6 +156,7 @@ export default function Index() {
           quidem et.
         </p>
       </section>
+
       <section id="order">
         <div className="container">
           <h2>Come Make an Order</h2>
@@ -182,6 +185,7 @@ export default function Index() {
           </Link>
         </div>
       </section>
+
       <section id="testimonials">
         <div className="container">
           <TestimonialCard
