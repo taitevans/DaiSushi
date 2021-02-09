@@ -32,10 +32,19 @@ const Page = ({ htmlString, data, tableCells }) => (
           ))}
         {data.table === false && (
           // Insert markdown
-          <div dangerouslySetInnerHTML={{ __html: htmlString }} />
+          <div
+            className="text-article"
+            dangerouslySetInnerHTML={{ __html: htmlString }}
+          />
         )}
       </article>
     </div>
+
+    <style global jsx>{`
+      .text-article * {
+        margin-bottom: 22px;
+      }
+    `}</style>
 
     <style jsx>{`
       article {
