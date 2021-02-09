@@ -49,29 +49,51 @@ const Footer = () => (
 
       .nav-links {
         display: flex;
-        margin: 0 auto;
+        flex-direction: column;
         padding: 22px 0 32px 0;
         overflow: hidden;
+        text-align: center;
+      }
+
+      .nav-links * {
+        width: 100%;
       }
 
       .footer-info {
         display: flex;
+        flex-direction: column;
+        text-align: center;
       }
 
       .footer-info * {
         color: var(--text-inv-2);
-      }
-
-      .footer-info > a:nth-child(2) {
-        margin-right: auto;
+        width: 100%;
       }
 
       .copyright {
         padding: 12px;
       }
+
       @media only screen and (min-width: 840px) {
         .footer-content {
           grid-column: span 12;
+        }
+
+        .nav-links {
+          flex-direction: row;
+          margin: 0 auto;
+        }
+
+        .footer-info * {
+          width: fit-content;
+        }
+
+        .footer-info {
+          flex-direction: row;
+        }
+
+        .footer-info > a:nth-child(2) {
+          margin-right: auto;
         }
       }
     `}</style>
