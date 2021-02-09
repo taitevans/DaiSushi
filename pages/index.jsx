@@ -233,19 +233,6 @@ export default function Index() {
         </div>
       </section>
 
-      <style global jsx>{`
-        .buttons > a {
-          width: fit-content;
-        }
-
-        .buttons > a:nth-child(1) {
-          padding: 20px 0;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-        }
-      `}</style>
-
       <style jsx>{`
         @keyframes platterRotate {
           from {
@@ -274,8 +261,12 @@ export default function Index() {
           margin-top: 54px;
         }
 
+        .buttons > a:nth-child(1) {
+          display: flex;
+          justify-content: center;
+        }
+
         .buttons > a:nth-child(2) {
-          /* margin-left: 8px; */
           margin-top: 8px;
         }
 
@@ -428,6 +419,17 @@ export default function Index() {
 
           .hero-container {
             grid-column: span 12;
+          }
+
+          .buttons {
+            display: flex;
+            width: fit-content;
+            flex-direction: row;
+          }
+
+          .buttons > a:nth-child(2) {
+            margin-left: 8px;
+            margin-top: 0px;
           }
 
           .menu-content {
