@@ -234,23 +234,30 @@ export default function Index() {
       </section>
 
       <style jsx>{`
+        #hero {
+          position: relative;
+          overflow: hidden;
+          margin: 0 -16px;
+          padding: 0 16px;
+        }
+
         @keyframes platterRotate {
           from {
-            transform: translate(60%, 56px) rotate(0deg);
+            transform: translateX(60%) rotate(0deg);
           }
           to {
-            transform: translate(60%, 56px) rotate(360deg);
+            transform: translateX(60%) rotate(360deg);
           }
         }
 
         .sushi-platter {
-          position: fixed;
+          position: absolute;
           width: 80vh;
           height: 80vh;
-          transform: translate(60%, 56px) rotate(0deg);
-          top: 0;
+          transform: translateX(60%) rotate(0deg);
           right: 0;
-          z-index: -4;
+          top: 0;
+          z-index: -1;
           animation: platterRotate 20s infinite linear;
         }
 
@@ -413,6 +420,26 @@ export default function Index() {
         }
 
         @media only screen and (min-width: 840px) {
+          #hero {
+            margin: 0;
+            padding: 0;
+          }
+
+          @keyframes platterRotate {
+            from {
+              transform: translateX(0%) rotate(0deg);
+            }
+            to {
+              transform: translateX(0%) rotate(360deg);
+            }
+          }
+
+          .sushi-platter {
+            width: 80vh;
+            height: 80vh;
+            transform: translateX(40%) rotate(0deg);
+          }
+
           .hero-title {
             font-size: 5.812em;
           }
