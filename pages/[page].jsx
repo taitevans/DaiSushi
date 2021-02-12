@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import Head from "next/head";
 import marked from "marked";
+import ListCard from "../components/ListCard";
 
 const Page = ({ htmlString, data, tableCells }) => (
   <>
@@ -21,12 +22,11 @@ const Page = ({ htmlString, data, tableCells }) => (
           // Map table to jsx
           Object.keys(tableCells).map((key, i) => (
             <div key={i}>
-              <h3>{tableCells[key][0][0].text}</h3>
-              <p>{tableCells[key][1][0].text}</p>
-              <p>{tableCells[key][2][0].text}</p>
-              <img
-                src={tableCells[key][3][0] ? tableCells[key][3][0].text : ""}
-                alt="Image"
+              <ListCard
+                heading={tableCells[key][0][0].text}
+                f1={tableCells[key][1][0].text}
+                f2={tableCells[key][2][0].text}
+                image={tableCells[key][3][0] ? tableCells[key][3][0].text : ""}
               />
             </div>
           ))}
