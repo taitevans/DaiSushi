@@ -411,7 +411,7 @@ export default function Index() {
         }
 
         #locations {
-          padding: 142px 0 84px 0;
+          padding: 142px 0 42px 0;
         }
 
         #locations .button {
@@ -495,6 +495,10 @@ export default function Index() {
             right: 0;
             margin: 0 calc(50% + 12px) 0 auto;
             text-align: left;
+          }
+
+          #locations {
+            padding: 142px 0 84px 0;
           }
 
           #order h2,
