@@ -15,7 +15,8 @@ const ListCard = (props) => (
       {props.f2.slice(0, 3) !== "+61" && <h6>${props.f2}</h6>}
     </div>
     <div className="image-container">
-      <img src={`${props.image}.jpg`} alt="Image" />
+      {/* Remove .jpg and add .webp when adding image/source */}
+      <img src={props.image} alt="Image" />
     </div>
 
     <style jsx>{`
