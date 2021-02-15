@@ -62,6 +62,10 @@ const Page = ({ htmlString, data, tableCells }) => (
         width: 100%;
       }
 
+      article * {
+        word-break: break-word;
+      }
+
       @media only screen and (min-width: 840px) {
         .list {
           margin-bottom: 128px;
