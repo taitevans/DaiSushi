@@ -39,11 +39,6 @@ const ListCard = (props) => (
         color: var(--text-2);
       }
 
-      a:nth-child(3),
-      p:nth-child(3) {
-        margin-top: auto;
-      }
-
       .image-container {
         grid-column: span 2;
         overflow: hidden;
