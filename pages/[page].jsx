@@ -1,3 +1,4 @@
+import React from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -17,27 +18,27 @@ const Page = ({ htmlString, data, tableCells }) => (
       <h2>{data.title}</h2>
     </div>
     <div className="container">
-      <article>
-        {data.table === true &&
-          // Map table to jsx
-          Object.keys(tableCells).map((key, i) => (
-            <div key={i}>
-              <ListCard
-                heading={tableCells[key][0][0].text}
-                f1={tableCells[key][1][0].text}
-                f2={tableCells[key][2][0].text}
-                image={tableCells[key][3][0] ? tableCells[key][3][0].text : ""}
-              />
-            </div>
-          ))}
-        {data.table === false && (
-          // Insert markdown
+      {data.table === true &&
+        // Map table to jsx
+        Object.keys(tableCells).map((key, i) => (
+          <React.Fragment key={i}>
+            <ListCard
+              heading={tableCells[key][0][0].text}
+              f1={tableCells[key][1][0].text}
+              f2={tableCells[key][2][0].text}
+              image={tableCells[key][3][0] ? tableCells[key][3][0].text : ""}
+            />
+          </React.Fragment>
+        ))}
+      {data.table === false && (
+        // Insert markdown
+        <article>
           <div
             className="text-article"
             dangerouslySetInnerHTML={{ __html: htmlString }}
           />
-        )}
-      </article>
+        </article>
+      )}
     </div>
 
     <style global jsx>{`
