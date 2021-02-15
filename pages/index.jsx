@@ -320,6 +320,10 @@ export default function Index() {
           padding: 116px 0 134px 0;
         }
 
+        #menu p {
+          padding: 6px 0 42px 0;
+        }
+
         .menu-content {
           position: static;
         }
