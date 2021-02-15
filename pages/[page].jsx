@@ -17,7 +17,7 @@ const Page = ({ htmlString, data, tableCells }) => (
     <div className="hero">
       <h2>{data.title}</h2>
     </div>
-    <div className="container">
+    <div className={data.table ? "container list" : "container"}>
       {data.table === true &&
         // Map table to jsx
         Object.keys(tableCells).map((key, i) => (
@@ -48,6 +48,14 @@ const Page = ({ htmlString, data, tableCells }) => (
     `}</style>
 
     <style jsx>{`
+      .container {
+        grid-row-gap: 72px;
+      }
+
+      .list {
+        margin-bottom: 66px;
+      }
+
       article {
         padding: 24px 0 42px 0;
         grid-column: span 4;
@@ -55,6 +63,10 @@ const Page = ({ htmlString, data, tableCells }) => (
       }
 
       @media only screen and (min-width: 840px) {
+        .list {
+          margin-bottom: 128px;
+        }
+
         article {
           padding: 24px 0 104px 0;
           grid-column: span 12;
