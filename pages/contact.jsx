@@ -40,7 +40,7 @@ const Contact = () => (
 
     <style jsx>{`
       #contact {
-        padding: 24px 0 104px 0;
+        padding: 24px 0 42px 0;
       }
 
       form,
@@ -86,6 +86,10 @@ const Contact = () => (
       }
 
       @media only screen and (min-width: 840px) {
+        #contact {
+          padding: 24px 0 104px 0;
+        }
+
         form {
           padding-top: 0;
         }
