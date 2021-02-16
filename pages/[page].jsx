@@ -6,82 +6,85 @@ import Head from "next/head";
 import marked from "marked";
 import ListCard from "../components/ListCard";
 
-const Page = ({ htmlString, data, tableCells }) => (
-  <>
-    <Head>
-      <title>{data.title}</title>
-      {data.description != false && (
-        <meta title="description" content={data.description} />
-      )}
-    </Head>
-    <div className="hero">
-      <h2>{data.title}</h2>
-    </div>
-    <div className={data.table ? "container list" : "container"}>
-      {data.table === true &&
-        // Map table to jsx
-        Object.keys(tableCells).map((key, i) => (
-          <React.Fragment key={i}>
-            <ListCard
-              heading={tableCells[key][0][0].text}
-              f1={tableCells[key][1][0].text}
-              f2={tableCells[key][2][0].text}
-              image={tableCells[key][3][0] ? tableCells[key][3][0].text : ""}
+export default function Page({ htmlString, data, tableCells }) {
+  return (
+    <>
+      <Head>
+        <title>{data.title}</title>
+        {data.description != false && (
+          <meta title="description" content={data.description} />
+        )}
+      </Head>
+      <div className="hero">
+        <h2>{data.title}</h2>
+      </div>
+      <div className={data.table ? "container list" : "container"}>
+        {data.table === true &&
+          // Map table to jsx
+          Object.keys(tableCells).map((key, i) => (
+            <React.Fragment key={i}>
+              <ListCard
+                heading={tableCells[key][0][0].text}
+                f1={tableCells[key][1][0].text}
+                f2={tableCells[key][2][0].text}
+                image={tableCells[key][3][0] ? tableCells[key][3][0].text : ""}
+              />
+            </React.Fragment>
+          ))}
+        {data.table === false && (
+          // Insert markdown
+          <article>
+            <div
+              className="text-article"
+              dangerouslySetInnerHTML={{ __html: htmlString }}
             />
-          </React.Fragment>
-        ))}
-      {data.table === false && (
-        // Insert markdown
-        <article>
-          <div
-            className="text-article"
-            dangerouslySetInnerHTML={{ __html: htmlString }}
-          />
-        </article>
-      )}
-    </div>
+          </article>
+        )}
+      </div>
 
-    <style global jsx>{`
-      .text-article * {
-        margin-bottom: 22px;
-      }
-    `}</style>
+      <style global jsx>{`
+        .text-article * {
+          margin-bottom: 22px;
+        }
+      `}</style>
 
-    <style jsx>{`
-      .container {
-        grid-row-gap: 72px;
-      }
-
-      .list {
-        margin-bottom: 66px;
-      }
-
-      article {
-        padding: 24px 0 42px 0;
-        grid-column: span 4;
-        width: 100%;
-      }
-
-      article * {
-        word-break: break-word;
-      }
+      <style jsx>{`
         .hero * {
           text-align: center;
         }
 
-      @media only screen and (min-width: 840px) {
+        .container {
+          grid-row-gap: 72px;
+        }
+
         .list {
-          margin-bottom: 128px;
+          margin: 24px 0 66px 0;
         }
 
         article {
-          padding: 24px 0 104px 0;
-          grid-column: span 12;
+          padding: 24px auto 42px auto;
+          grid-column: span 4;
+          width: 100%;
         }
-      }
-    `}</style>
-  </>
-);
+
+        article * {
+          word-break: break-word;
+        }
+
+        @media only screen and (min-width: 840px) {
+          .list {
+            margin: 24px auto 128px auto;
+          }
+
+          article {
+            padding: 24px 0 104px 0;
+            grid-column: span 12;
+          }
+        }
+      `}</style>
+    </>
+  );
+}
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync("content");
@@ -120,5 +123,3 @@ export const getStaticProps = async ({ params: { page } }) => {
     },
   };
 };
-
-export default Page;
