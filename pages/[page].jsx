@@ -65,6 +65,9 @@ const Page = ({ htmlString, data, tableCells }) => (
       article * {
         word-break: break-word;
       }
+        .hero * {
+          text-align: center;
+        }
 
       @media only screen and (min-width: 840px) {
         .list {

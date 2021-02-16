@@ -39,6 +39,10 @@ const Contact = () => (
     </section>
 
     <style jsx>{`
+      .hero * {
+        text-align: center;
+      }
+
       #contact {
         padding: 24px 0 42px 0;
       }
