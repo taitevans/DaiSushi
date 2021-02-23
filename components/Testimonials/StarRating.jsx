@@ -25,11 +25,11 @@ export default function StarRating(props) {
   let halfStarList = [];
 
   for (let i = 0; i < stars; ++i) {
-    starList.push(<StarIcon />);
+    starList.push(<StarIcon key={i} />);
   }
 
   for (let i = 0; i < halfStars; ++i) {
-    halfStarList.push(<HalfStarIcon />);
+    halfStarList.push(<HalfStarIcon key={i} />);
   }
 
   return (
